@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import * as PropTypes from "prop-types"
 
-// const typography = new Typography()
-
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
@@ -46,7 +44,6 @@ class Html extends Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Using gatsby-plugin-sass</title>
           {css}
         </head>
         <body>
