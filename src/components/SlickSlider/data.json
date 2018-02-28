@@ -1,0 +1,77 @@
+{
+    "title": "Vår värld",
+    "labels": {
+        "next": "Visa nästa artikel",
+        "prev": "Visa föregående artikel"
+    },
+    "items": [
+        {
+            "tag": "Peruansk matlagning",
+            "title": "Carlos Domínguez",
+            "text": "Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Curabitur est gravida et libero vitae dictum.",
+            "image": {
+                "src": "/static/core/images/example2.jpg",
+                "alt": "",
+                "focal": {
+                    "x": "50%",
+                    "y": "50%"
+                }
+            },
+            "link": {
+                "href": "#",
+                "title": "",
+                "text": "Läs vidare<span class=\"sr-only\"> om \"Peruansk matlagning\"</span>"
+            },
+            "id": 1
+        },
+        {
+            "tag": "Peruansk matlagning",
+            "title": "Slide 2",
+            "text": "Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.",
+            "link": {
+                "href": "#",
+                "title": "",
+                "text": "Läs vidare<span class=\"sr-only\"> om \"Peruansk matlagning\"</span>"
+            },
+            "id": 2
+        },
+        {
+            "tag": "Peruansk matlagning",
+            "title": "Slide 3 lpogkjdg ljdflöj gdlkf klfjh dlkfhj",
+            "text": "Morbi odio eros, volutpat ut pharetra vitae. Curabitur est gravida et libero vitae dictum.",
+            "image": {
+                "src": "/static/core/images/example3.jpg",
+                "alt": "",
+                "focal": {
+                    "x": "50%",
+                    "y": "50%"
+                }
+            },
+            "link": {
+                "href": "#",
+                "title": "",
+                "text": "Läs vidare<span class=\"sr-only\"> om \"Peruansk matlagning\"</span>"
+            },
+            "id": 3
+        },
+        {
+            "tag": "Peruansk matlagning",
+            "title": "Slide 4",
+            "text": "Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Curabitur est gravida et libero vitae dictum.",
+            "image": {
+                "src": "/static/core/images/example.jpg",
+                "alt": "",
+                "focal": {
+                    "x": "50%",
+                    "y": "50%"
+                }
+            },
+            "link": {
+                "href": "#",
+                "title": "",
+                "text": "Läs vidare<span class=\"sr-only\"> om \"Peruansk matlagning\"</span>"
+            },
+            "id": 4
+        }
+    ]
+}

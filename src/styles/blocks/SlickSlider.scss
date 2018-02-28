@@ -1,0 +1,245 @@
+.SlickSlider {
+    $root: &;
+
+    .slick-slider {
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    &__Slider {
+        position: relative;
+        padding-right: 50px;
+        margin: 0 -5px;
+
+        @include media(sm) {
+            padding: 0;
+        }
+
+        .slick-list {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            transform: translate3d(0,0,0);
+        }
+
+        .gatsby-image-wrapper {
+            width: 100%;
+            padding-bottom: 133%;
+        }
+    }
+
+    &__Slide {
+        display: flex;
+        height: auto;
+
+        &.slick-slide {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+
+        .slick-initialized &.slick-slide {
+            display: block;
+        }
+
+        #{$root}--CardArticle &,
+        #{$root}--CardArticleSubject & {
+            padding: 0 5px 20px;
+        }
+
+        #{$root}--CardArticleHalf & {
+            padding: 0 10px;
+        }
+    }
+
+    &__Control {
+        position: absolute;
+        top: -58px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: transparent;
+        transition: all 0.2s ease-in;
+
+        &:not(.SlickSlider__Control--Disabled) {
+            cursor: pointer;
+        }
+
+        &:hover:not(.SlickSlider__Control--Disabled) {
+
+            svg {
+                fill: white;
+
+                :first-child {
+                    fill: transparent;
+                }
+            }
+
+            @media(hover: none) {
+                background: transparent;
+
+                svg {
+                    fill: black;
+
+                    :first-child {
+                        fill: black;
+                    }
+                }
+            }
+
+            #{$root}--CardArticleSubject & {
+                background: white;
+
+                svg {
+                    fill: pink;
+
+                    :first-child {
+                        fill: transparent;
+                    }
+                }
+
+                @media(hover: none) {
+                    background: transparent;
+
+                    svg {
+                        fill: white;
+
+                        :first-child {
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--Disabled{
+            opacity: 0.2;
+        }
+
+        &--Next {
+            right: 5px;
+
+            #{$root}--CardArticle &,
+            #{$root}--CardArticleSubject & {
+                right: -45px;
+
+                @include media(sm) {
+                    right: 5px;
+                }
+            }
+
+            #{$root}--CardArticleHalf & {
+                right: 10px;
+
+                @include media(sm) {
+                    right: 10px;
+                }
+            }
+        }
+
+        &--Prev {
+            transform: scale(-1, 1);
+            right: 49px;
+
+            #{$root}--CardArticle &,
+            #{$root}--CardArticleSubject & {
+                right: -5px;
+
+                @include media(sm) {
+                    right: 49px;
+                }
+            }
+
+            #{$root}--CardArticleHalf & {
+                right: 54px;
+
+                @include media(sm) {
+                    right: 54px;
+                }
+            }
+        }
+
+        svg {
+            fill: rgba(0,0,0,0.6);
+
+            #{$root}--CardArticleSubject & {
+                fill: white;
+            }
+        }
+    }
+}
+
+// Third party override
+.slick-track {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+
+        &:before {
+            font-size: 46px;
+            line-height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '•';
+            text-align: center;
+            opacity: .25;
+            color: black;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+
+    li.slick-active button:before {
+        opacity: 0.7;
+        color: black;
+    }
+}
