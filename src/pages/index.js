@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
 import Hero from '../components/Hero'
 import Intro from '../components/Intro'
@@ -9,10 +10,10 @@ import Contact from '../components/Contact'
 
 class IndexPage extends React.Component {
   render() {
-    console.log(this.props.data.galleryImages.edges);
+
     return (
       <main className="main">
-          <Hero />
+          <Img sizes={this.props.data.heroImage.sizes} />
           <Intro />
           <Accommodation />
           <Facilities images={this.props.data.galleryImages.edges} />
@@ -39,6 +40,11 @@ export const pageQuery = graphql`
                         ...GatsbyImageSharpSizes
                     }
                 }
+            }
+        },
+        heroImage: imageSharp(id: { regex: "/lejonet.jpg/" }) {
+            sizes(maxWidth: 1400) {
+                ...GatsbyImageSharpSizes
             }
         }
     }
