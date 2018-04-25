@@ -23,4 +23,16 @@
             display: flex;
         }
     }
+
+    &__lang {
+        font-size: 1.8rem;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

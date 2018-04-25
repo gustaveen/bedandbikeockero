@@ -1,10 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Header = () => (
+import SelectLanguage from '../SelectLanguage';
+
+const Header = (props) => (
     <header className="header">
         <div className="header__container">
-            <p>Bed and bike Öckerö</p>
+            <p>Bed & Bike Öckerö</p>
+            <SelectLanguage langs={props.langs} />
         </div>
     </header>
 )

@@ -1,52 +1,44 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Img from 'gatsby-image'
+import React from 'react';
+import graphql from 'graphql';
+import { getUserLangKey } from 'ptz-i18n';
+import { withPrefix } from "gatsby-link";
 
-import Hero from '../components/Hero'
-import Intro from '../components/Intro'
-import Accommodation from '../components/Accommodation'
-import Facilities from '../components/Facilities'
-import Contact from '../components/Contact'
+class RedirectIndex extends React.PureComponent {
+  constructor(args) {
+    super(args);
 
-class IndexPage extends React.Component {
+    // Skip build, Browsers only
+    if (typeof window !== 'undefined') {
+      const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
+      const langKey = getUserLangKey(langs, defaultLangKey);
+      const homeUrl = withPrefix(`/${langKey}/`);
+
+      // I don`t think this is the best solution
+      // I would like to use Gatsby Redirects like: 
+      // https://github.com/gatsbyjs/gatsby/tree/master/examples/using-redirects
+      // But Gatsby Redirects are static, they need to be specified at build time,
+      // This redirect is dynamic, It needs to know the user browser language.
+      // Any ideias? Join the issue: https://github.com/angeloocana/gatsby-starter-default-i18n/issues/4
+      window.___history.replace(homeUrl);
+    }
+  }
+
   render() {
-
-    return (
-      <main className="main">
-          <Img sizes={this.props.data.heroImage.sizes} />
-          <Intro />
-          <Accommodation />
-          <Facilities images={this.props.data.galleryImages.edges} />
-          <Contact />
-      </main>
-    )
+    return (<div />);
   }
 }
 
-export default IndexPage
+export default RedirectIndex;
 
 export const pageQuery = graphql`
-    query IndexQuery {
-        galleryImages: allImageSharp(filter: {id: {regex: "/faciliteter/"}}) {
-            edges {
-                node {
-                    id
-                    original {
-                        width
-                        height
-                        src
-                    }
-                    sizes(maxWidth: 800) {
-                        ...GatsbyImageSharpSizes
-                    }
-                }
-            }
-        },
-        heroImage: imageSharp(id: { regex: "/lejonet.jpg/" }) {
-            sizes(maxWidth: 1400) {
-                ...GatsbyImageSharpSizes
-            }
+  query IndexQuery {    
+    site{
+      siteMetadata{
+        languages {
+          defaultLangKey
+          langs
         }
+      }
     }
-`
-
+  }
+`;
