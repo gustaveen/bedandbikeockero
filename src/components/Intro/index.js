@@ -7,7 +7,6 @@ import house from '../../images/villan.jpg'
 
 class Intro extends React.PureComponent {
     render() {
-        console.log(this.props);
         return (
             <section className="intro section">
                 <div className="intro__header section__container u-center u-text-center">
@@ -18,9 +17,9 @@ class Intro extends React.PureComponent {
                         <FormattedMessage id="introText" />
                     </p>
                 </div>
-                <div className="billboard u-center">
-                    <img className="billboard__image" src={house} alt="Vår fina villa" />
-                    <div className="billboard__image-2"></div>
+                <div className="intro__billboard u-center">
+                    <img className="intro__image" src={house} alt="Vår fina villa" />
+                    <div className="intro__image-2"></div>
                 </div>
             </section>
         );

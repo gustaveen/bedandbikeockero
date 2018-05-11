@@ -1,0 +1,47 @@
+.intro {
+
+    &__preamble {
+        max-width: 580px;
+        text-align: left;
+    }
+
+    @include media(md) {
+        &__preamble {
+            font-size: map-get($fontsize, xl);
+            line-height: 1.6;
+        }
+    }
+
+    @include media(md) {
+        &__header {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__billboard {
+        position: relative;
+
+        @include media(lg) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+    @include media(lg) {
+    
+        &__image {
+            width: 57%;
+            height: 100%;
+        }
+
+        &__image-2 {
+            display: block;
+            width: 43%;
+            background: url('../images/cykel.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+}
