@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import * as PropTypes from "prop-types"
+import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -29,16 +30,12 @@ class Html extends Component {
     }
 
     return (
-      <html op="news" lang="en">
+      <html lang="en">
         <head>
           {this.props.headComponents}
 
           <meta name="referrer" content="origin" />
           <meta charSet="utf-8" />
-          <meta
-            name="description"
-            content="Välkommen till Bed and Bike Öckerö, en pärla i Göteborgs skärgård för aktiviteter och rekreation."
-          />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
             name="viewport"

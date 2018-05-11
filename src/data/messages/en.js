@@ -2,6 +2,7 @@ module.exports = {
   'selectLanguage': 'Välj språk',
   'en': 'In English',
   'sv': 'In Swedish',
+  'metaDescription': 'Welcome to Bed and Bike Öckerö',
   'introTitle': 'Welcome to Öckerö',
   'introText': 'Come stay in a century old villa in the beautiful northern archipelago of Gothenburg. Enjoy our convenient rooms, a healthy breakfast and the calmness of the island. We also provide bikes and kayaks for rent. We love to show you around.',
   'accomodationTitle': 'Our rooms',

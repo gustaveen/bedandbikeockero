@@ -4,7 +4,6 @@ import Link from 'gatsby-link';
 import { FormattedMessage } from 'react-intl';
 
 const SelectLanguage = (props) => {
-  console.log(props.langs);
   const langs = props.langs;
 
   return (

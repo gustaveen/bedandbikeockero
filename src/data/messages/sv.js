@@ -2,6 +2,7 @@ module.exports = {
   'selectLanguage': 'Välj språk',
   'en': 'In English',
   'sv': 'På Svenska',
+  'metaDescription': 'Välkommen till Bed and Bike Öckerö, en pärla i Göteborgs skärgård för aktiviteter och rekreation.',
   'introTitle': 'Välkommen till Öckerö',
   'introText': 'Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och nyttig frukost. Du kan hyra cykel och kajak. Vi kan erbjuda förslag på turer såväl med cykel, kajak som vandring.',
   'accomodationTitle': 'Våra rum',

@@ -14,7 +14,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-    
+    console.log(i18nMessages);
     return (
         <IntlProvider
           locale={langKey}
@@ -24,8 +24,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
                 <Helmet
                     title="Bed and Bike Öckerö"
                     meta={[
-                        { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' },
+                        { name: 'description', content: i18nMessages.metaDescription },
                     ]}
                 />
                 <Header langs={langsMenu} />

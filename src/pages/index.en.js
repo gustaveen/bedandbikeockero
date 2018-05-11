@@ -10,7 +10,6 @@ import Contact from '../components/Contact'
 
 class IndexPage extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <main className="main">
           <Img sizes={this.props.data.heroImage.sizes} />
