@@ -37,7 +37,7 @@ class Html extends Component {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Gatsby example site demoing sass plugin"
+            content="Välkommen till Bed and Bike Öckerö, en pärla i Göteborgs skärgård för aktiviteter och rekreation."
           />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
