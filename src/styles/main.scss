@@ -1,12 +1,13 @@
 // Base
 @import 'core/reset';
-@import 'core/variables';
-@import 'core/fonts';
 @import 'core/functions';
 @import 'core/mixins';
+@import 'core/variables';
 @import 'core/utils';
 @import 'core/globals';
 @import 'core/animations';
+@import 'core/fonts';
+
 
 // Componenets
 @import '../components/Header/Header';
@@ -15,9 +16,11 @@
 @import '../components/Accommodation/Accommodation';
 @import '../components/Facilities/Facilities';
 @import '../components/SlickSlider/SlickSlider';
+@import '../components/NavMain/NavMain';
 
 // Blocks
 @import 'blocks/heading';
 @import 'blocks/main';
 @import 'blocks/section';
+// @import 'blocks/wrap';
 

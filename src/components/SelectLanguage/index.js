@@ -7,10 +7,10 @@ const SelectLanguage = (props) => {
   const langs = props.langs;
 
   return (
-    <div className="header__lang">
+    <div className="Header__Lang">
         {langs.map((lang, index)  =>
           <Link to={lang.link} key={lang.langKey} style={{
-            color: 'white'
+            color: 'black'
           }}>
             {!lang.selected &&
               <div selected={lang.selected}>

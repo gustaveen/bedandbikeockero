@@ -14,7 +14,7 @@
     @if map-has-key($fonttypes, $font-type) {
         $font-type-properties: map-get($fonttypes, $font-type);
 
-        @if map-has-key($font-type-properties, $font-size) {
+        @if map-has-key($font-type-properties, $font-size) Ä{
             $font-size-properties: map-get($font-type-properties, $font-size);
 
             font-size: #{map-get($font-size-properties, font-size)}rem;
@@ -30,3 +30,67 @@
         @error 'Unfortunately, no value could be retrieved from  `#{$font-type}`.';
     }
 }
+
+@mixin u-wrap($list: (), $default: true) {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @if $default {
+
+        @if contains($list, site) {
+            max-width: (map-get($maxwidths, site) + 60px);
+        }
+
+        // @if contains($list, article) {
+        //     max-width: (map-get($maxwidths, article) + 60px);
+        // }
+
+        // @if contains($list, content) {
+        //     max-width: (map-get($maxwidths, content) + 60px);
+        // }
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+        @include media(sm) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include media(md) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @include media(lg) {
+            padding-left: 60px;
+            padding-right: 60px;
+
+            @if contains($list, site) {
+                max-width: (map-get($maxwidths, site) + 120px);
+            }
+
+            // @if contains($list, article) {
+            //     max-width: (map-get($maxwidths, article) + 120px);
+            // }
+
+            // @if contains($list, content) {
+            //     max-width: (map-get($maxwidths, content) + 120px);
+            // }
+        }
+    } @else {
+        @if contains($list, site) {
+            max-width: (map-get($maxwidths, site));
+        }
+
+        @if contains($list, article) {
+            max-width: (map-get($maxwidths, article));
+        }
+
+        @if contains($list, content) {
+            max-width: (map-get($maxwidths, content));
+        }
+    }
+}
+

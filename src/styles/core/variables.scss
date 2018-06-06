@@ -3,18 +3,47 @@ $paths: (
     fonts: '../fonts'
 );
 
-$breakpoints: (
-    sm: 480px,
-    md: 768px,
-    lg: 1024px,
-);
-
 $maxwidths: (
     sm: 480px,
     md: 768px,
     lg: 960px,
     xl: 1240px,
+    article: 580px,
+    content: 900px,
+    site: 1240px
 );
+
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1440px,
+);
+
+$gutter: 24px;
+
+// Grid and site widths
+// $maxwidths: (
+//     sm: 360px,
+//     md: 720px,
+//     ml: 808px,
+//     lg: 1024px,
+//     xl: 1280px,
+//     xxl: 1440px,
+//     article: 580px,
+//     content: 900px,
+//     site: 1240px
+// );
+
+// $breakpoints: (
+//     xs: 360px, // S Mobile
+//     sm: 480px, // (not used)
+//     md: 768px, // M Tablet
+//     ml: 1024px, // M Tablet landscape (not used)
+//     lg: 1280px, // L Desktop
+//     xl: 1440px, // XL Desktop Large
+//     mobile-menu: 1024px, // For media queries specifically related to mobile menu
+// );
 
 $gutters: (
     default: 0,
@@ -71,8 +100,10 @@ $fontsize: (
     xxxl: 4.8rem
 );
 
-$din: 'dan', serif;
-$yrsa: 'yrsa', serif;
+$circular: 'CircularStd', sans-serif;
+$heading: $circular;
+$yrsa: 'yrsa', sans-serif;
+
 
 // Z-index
 $z-index-1: 100;

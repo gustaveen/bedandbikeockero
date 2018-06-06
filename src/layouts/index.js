@@ -27,7 +27,10 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
                         { name: 'description', content: i18nMessages.metaDescription },
                     ]}
                 />
-                <Header langs={langsMenu} />
+                <Header 
+                    langs={langsMenu} 
+                    currentLang={langKey}
+                />
                 {children()}
             </div>
         </IntlProvider>

@@ -15,7 +15,6 @@ class IndexPage extends React.Component {
           <Img sizes={this.props.data.heroImage.sizes} />
           <Intro />
           <Accommodation />
-          <Facilities images={this.props.data.galleryImages.edges} />
           <Contact />
       </main>
     )
