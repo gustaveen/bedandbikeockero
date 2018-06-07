@@ -8,8 +8,8 @@ const NavMain = (props) => (
     <ul className="NavMain">
         <li
             className={
-            location.pathname === '/rooms/'
-                ? 'NavMain__Item--Active'
+            location.pathname === `/${props.currentLang}/rooms/`
+                ? 'NavMain__Item NavMain__Item--Active'
                 : 'NavMain__Item'
             }
         >
@@ -19,12 +19,12 @@ const NavMain = (props) => (
         </li>
         <li
             className={
-            location.pathname === '/rooms/'
-                ? 'NavMain__Item--Active'
+            location.pathname === `/${props.currentLang}/activities/`
+                ? 'NavMain__Item NavMain__Item--Active'
                 : 'NavMain__Item'
             }
         >
-            <Link to={`/${props.currentLang}/rooms/`} className="NavMain__ItemLink">
+            <Link to={`/${props.currentLang}/activities/`} className="NavMain__ItemLink">
                 <FormattedMessage id="navActivities" />
             </Link>
         </li>

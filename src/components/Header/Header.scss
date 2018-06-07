@@ -34,6 +34,11 @@
         }
     }
 
+    &__Menu {
+        display: flex;
+        align-items: baseline;
+    }
+
     &__MenuLink {
         color: black;
         text-decoration: none;

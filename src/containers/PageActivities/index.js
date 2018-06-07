@@ -6,17 +6,17 @@ import Accommodation from '../../components/Accommodation'
 import Facilities from '../../components/Facilities'
 import Contact from '../../components/Contact'
 
-class PageRooms extends React.Component {
+class PageHome extends React.Component {
   render() {
     console.log(this.props);
     return (
       <main className="main">
+          <Img sizes={this.props.data.heroImage.sizes} />
           <Accommodation />
-          <Facilities images={this.props.data.galleryImages.edges} />
           <Contact />
       </main>
     )
   }
 }
 
-export default PageRooms
+export default PageHome

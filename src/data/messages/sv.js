@@ -1,7 +1,7 @@
 module.exports = {
   'selectLanguage': 'Välj språk',
-  'en': 'In English',
-  'sv': 'På Svenska',
+  'en': 'English',
+  'sv': 'Svenska',
   'metaDescription': 'Välkommen till Bed and Bike Öckerö, en pärla i Göteborgs skärgård för aktiviteter och rekreation.',
   'navRooms': 'Våra rum',
   'navFindUs': 'Hitta hit',

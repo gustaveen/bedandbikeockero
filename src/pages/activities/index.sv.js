@@ -1,5 +1,5 @@
 import React from 'react';
-import PageRooms from '../../containers/PageRooms';
+import PageActivities from '../../containers/PageActivities';
 import graphql from 'graphql';
 
 const i18n = {
@@ -23,10 +23,10 @@ const i18n = {
     `
 };
 
-export default (props) => <PageRooms i18n={i18n} {...props} />;
+export default (props) => <PageActivities i18n={i18n} {...props} />;
 
 export const pageQuery = graphql`
-    query RoomsSvQuery {
+    query ActivitiesSvQuery {
         galleryImages: allImageSharp(filter: {id: {regex: "/faciliteter/"}}) {
             edges {
                 node {
@@ -40,6 +40,11 @@ export const pageQuery = graphql`
                         ...GatsbyImageSharpSizes
                     }
                 }
+            }
+        },
+        heroImage: imageSharp(id: { regex: "/apeloga.jpg/" }) {
+            sizes(maxWidth: 2000) {
+                ...GatsbyImageSharpSizes
             }
         }
     }

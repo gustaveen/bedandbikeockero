@@ -97,7 +97,7 @@
     @include media(lg) {
 
         &__container {
-            max-width: 1240px;
+            max-width: 1300px;
             padding-left: map-get($gutters, lg);
             padding-right: map-get($gutters, lg);
         }

@@ -1,0 +1,82 @@
+.SelectLanguage {
+    $path: #{map-get($paths, 'img')};
+
+    position: relative;
+    margin-left: 20px;
+
+    .NavMain__Item & {
+        padding: 5px 0;
+    }
+
+    &__Label {
+        display: none;
+    }
+
+    &__Wrap {
+        position: relative;
+
+        .NavMainMobile__InputItem & {
+            height: 60px;
+        }
+    }
+
+    &__TitleContainer {
+
+        .NavMainMobile__InputItem & {
+            padding: 20px;
+        }
+    }
+
+    &__Title {
+        font-size: 1.2rem;
+        color: #8B8B8B;
+        line-height: 1.4;
+        letter-spacing: 0.8px;
+        display: block;
+        padding-right: 18px;
+        position: relative;
+
+        @include media(lg) {
+            font-size: 1.4rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0px;
+            width: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('#{$path}/icon-chevron.svg');
+
+            .NavMainMobile__InputItem & {
+                width: 12px;
+            }
+        }
+
+        .NavMainMobile__InputItem & {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__Select {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        opacity: 0;
+        font-size: 1.6rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .NavMainMobile__InputItem & {
+            width: 100%;
+            height: 60px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 module.exports = {
   'selectLanguage': 'Välj språk',
-  'en': 'In English',
-  'sv': 'In Swedish',
+  'en': 'English',
+  'sv': 'Svenska',
   'metaDescription': 'Welcome to Bed and Bike Öckerö',
   'navRooms': 'Rooms',
   'navFindUs': 'Getting here',

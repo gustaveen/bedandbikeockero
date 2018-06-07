@@ -14,7 +14,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-    console.log(i18nMessages);
+
     return (
         <IntlProvider
           locale={langKey}
@@ -26,7 +26,9 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
                     meta={[
                         { name: 'description', content: i18nMessages.metaDescription },
                     ]}
-                />
+                >
+                    <link rel="stylesheet" href="https://use.typekit.net/ayz7upu.css" />
+                </Helmet>
                 <Header 
                     langs={langsMenu} 
                     currentLang={langKey}
