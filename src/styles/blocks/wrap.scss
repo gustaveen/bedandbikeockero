@@ -1,0 +1,30 @@
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+
+    @include media(sm) {
+        max-width: (map-get($maxwidths, sm));
+    }
+
+    @include media(md) {
+        max-width: (map-get($maxwidths, md));
+    }
+
+    @include media(ml) {
+        max-width: (map-get($maxwidths, ml));
+    }
+
+    @include media(lg) {
+        max-width: (map-get($maxwidths, lg));
+    }
+
+    @include media(xl) {
+        max-width: (map-get($maxwidths, xl));
+    }
+
+    @include media(xxl) {
+        max-width: (map-get($maxwidths, xxl));
+    }
+}
