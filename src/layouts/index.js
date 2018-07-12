@@ -11,7 +11,6 @@ import "../styles/main.scss"
 const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
     const url = location.pathname;
     const { langs, defaultLangKey } = data.site.siteMetadata.languages;
-    console.log(data.site);
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));

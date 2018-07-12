@@ -8,7 +8,7 @@ import Contact from '../../components/Contact'
 
 class PageRooms extends React.Component {
   render() {
-    console.log(this.props);
+
     return (
       <main className="main">
           <Accommodation />
