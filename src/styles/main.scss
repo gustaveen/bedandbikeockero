@@ -8,6 +8,8 @@
 @import 'core/animations';
 @import 'core/fonts';
 
+// Blocks
+@import 'blocks/wrap';
 
 // Componenets
 @import '../components/Header/Header';
@@ -18,10 +20,4 @@
 @import '../components/SlickSlider/SlickSlider';
 @import '../components/NavMain/NavMain';
 @import '../components/SelectLanguage/SelectLanguage';
-
-// Blocks
-@import 'blocks/heading';
-@import 'blocks/main';
-@import 'blocks/section';
-// @import 'blocks/wrap';
 

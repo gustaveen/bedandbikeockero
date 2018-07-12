@@ -1,61 +1,53 @@
-.u {
+// For setting font-size and line-height on elements defined by variabels, including media queries
+// e.g. @include u-text(h1);
 
-    &-clearfix {
-        zoom: 1;
+@mixin u-text($key) {
 
-        &::before {
-            content: '';
-            display: block;
-        }
+    // Loop through text map and set font-size and line-height for each media query
+    @if map-has-key($text, $key) {
+        $map: map-get($text, $key);
 
-        &::after {
-            clear: both;
-            content: '';
-            display: table;
-        }
-    }
+        @each $media, $style in $map {
+            @include media($media) {
+                @if map-has-key($style, font-size) {
+                    $font-size: map-get($style, font-size);
+                    font-size: $font-size;
+                }
 
-    &-center {
-        margin: 0 auto;
-    }
-
-    &-text-center {
-        text-align: center;
-    }
-
-    &-wrap {
-        padding-left: map-get($gutters, lg);
-        padding-right: map-get($gutters, lg);
-    }
-
-    &-wrap--sm {
-        @include media(sm) {
-            max-width: map-get($maxwidths, sm) + map-get($gutters, sm) * 2;
+                @if map-has-key($style, line-height) {
+                    $line-height: map-get($style, line-height);
+                    line-height: $line-height;
+                }
+            }
         }
     }
 
-    &-wrap--md {
-        @include media(md) {
-            max-width: map-get($maxwidths, md) + map-get($gutters, lg) * 2;
-            padding-left: map-get($gutters, lg);
-            padding-right: map-get($gutters, lg);
-        }
+    @if ($key == h1 or $key == h2 or $key == h3 or $key == h4 or $key == h5 or $key == h6) {
+        font-family: $heading-font;
+        font-weight: $bold;
+        font-style: normal;
     }
-
-    &-wrap--lg {
-        @include media(lg) {
-            max-width: map-get($maxwidths, xl) + map-get($gutters, lg) * 2;
-            padding-left: map-get($gutters, lg);
-            padding-right: map-get($gutters, lg);
-        }
+    @elseif $key == label {
+        letter-spacing: .8px;
+        text-transform: uppercase;
+        color: rgba(black, .7);
     }
+    @elseif $key == brand or $key == navigation {
+        font-family: $heading-font;
+        font-weight: $bold;
+    }
+    @elseif $key == caption {
+        color: $gray-50;
+    }
+    @elseif $key == popup-title {
+        font-family: $heading-font;
+        color: $heading-color;
+    }
+    @elseif $key == link or $key == link-small {
+        color: $link-color;
 
-    &-sr {
-        // Text meant only for screen readers.
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        overflow: hidden;
-        position: absolute !important;
-        width: 1px;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

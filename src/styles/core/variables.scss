@@ -3,47 +3,33 @@ $paths: (
     fonts: '../fonts'
 );
 
+$gutter: 24px;
+$gutterMobile: 16px; // Used for media query below md
+
+// Grid and site widths
 $maxwidths: (
     sm: 480px,
     md: 768px,
-    lg: 960px,
-    xl: 1300px,
-    article: 580px,
-    content: 900px,
+    ml: 960px,
+    lg: 1024px,
+    xl: 1280px,
+    xxl: 1440px,
+    content: 816px,
+    text: 520px,
+    productForm: 808px,
     site: 1240px
 );
 
 $breakpoints: (
-    sm: 480px,
-    md: 768px,
-    lg: 1024px,
-    xl: 1440px,
+    xs: 360px, // S Mobile
+    sm: 480px, // (not used)
+    md: 768px, // M Tablet
+    ml: 1024px, // M Tablet landscape (not used)
+    lg: 1280px, // L Desktop
+    xl: 1440px, // XL Desktop Large
+    xxl: 1680px, // XXL Desktop Large (not used)
+    mobile-menu: 1024px, // For media queries specifically related to mobile menu
 );
-
-$gutter: 24px;
-
-// Grid and site widths
-// $maxwidths: (
-//     sm: 360px,
-//     md: 720px,
-//     ml: 808px,
-//     lg: 1024px,
-//     xl: 1280px,
-//     xxl: 1440px,
-//     article: 580px,
-//     content: 900px,
-//     site: 1240px
-// );
-
-// $breakpoints: (
-//     xs: 360px, // S Mobile
-//     sm: 480px, // (not used)
-//     md: 768px, // M Tablet
-//     ml: 1024px, // M Tablet landscape (not used)
-//     lg: 1280px, // L Desktop
-//     xl: 1440px, // XL Desktop Large
-//     mobile-menu: 1024px, // For media queries specifically related to mobile menu
-// );
 
 $gutters: (
     default: 0,
@@ -51,13 +37,6 @@ $gutters: (
     md: 20px,
     lg: 30px,
     xl: 40px
-);
-
-$padding: (
-    default: 15px,
-    sm: 20px,
-    md: 20px,
-    lg: 40px
 );
 
 $palettes: (
@@ -88,18 +67,6 @@ $palettes: (
     )
 );
 
-$fontsize: (
-    d: 1rem,
-    xxs: 1rem,
-    xs: 1.4rem,
-    sm: 1.6rem,
-    md: 1.8rem,
-    lg: 2rem,
-    xl: 2.4rem,
-    xxl: 2.8rem,
-    xxxl: 4.8rem
-);
-
 $circular: 'CircularStd', sans-serif;
 $heading: $circular;
 $proxima: "proxima-nova", sans-serif;
@@ -118,3 +85,58 @@ $z-index-9: 900;
 $z-index-10: 1000;
 
 $z-index--header: $z-index-2;
+
+// Use fluid font-sizes for headings
+$text: (
+    hero: (
+        d: (font-size: 4rem, line-height: 1.2),
+        sm: (font-size: calc(40px + (60 - 40) * (100vw - 480px)/ (1440 - 480))),
+        xl: (font-size: 6rem),
+    ),
+    h1: (
+        d: (font-size: 3rem, line-height: 1.33),
+        sm: (font-size: calc(30px + (48 - 30) * (100vw - 480px)/ (1440 - 480))),
+        xl: (font-size: 4.8rem,  line-height: 1.17),
+    ),
+    h2: (
+        d: (font-size: 2.4rem, line-height: 1.33),
+        sm: (font-size: calc(24px + (36 - 24) * (100vw - 480px)/ (1440 - 480))),
+        xl: (font-size: 3.6rem, line-height: 1.1),
+    ),
+    h3: (
+        d: (font-size: 2rem, line-height: 1.33),
+        sm: (font-size: calc(20px + (24 - 20) * (100vw - 480px)/ (1440 - 480))),
+        xl: (font-size: 2.4rem),
+    ),
+    h4: (
+        d: (font-size: 1.8rem, line-height: 1.33)
+    ),
+    large: (
+        d: (font-size: 1.8rem, line-height: 2)
+    ),
+    small: (
+        d: (font-size: 1.3rem, line-height: 1.54)
+    ),
+    meta: (
+        d: (font-size: 10, line-height: 1.6)
+    ),
+    quote: (
+        d: (font-size: 24, line-height: 1.33)
+    ),
+    preamble: (
+        d: (font-size: 1.6rem, line-height: 1.625),
+        md: (font-size: 1.8rem, line-height: 1.55),
+    ),
+    body: (
+        d: (font-size: 1.5rem, line-height: 1.6),
+    ),
+    label: (
+        d: (font-size: 1.1rem, line-height: 1.2),
+    ),
+    th: (
+        d: (font-size: 1.5rem, line-height: 1.2),
+    ),
+    td: (
+        d: (font-size: 1.3rem, line-height: 1.85),
+    )
+);

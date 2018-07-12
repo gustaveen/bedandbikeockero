@@ -1,25 +1,24 @@
-.intro {
+.Intro {
 
-    &__preamble {
+    &__Preamble {
         max-width: 580px;
         text-align: left;
     }
 
     @include media(md) {
-        &__preamble {
-            font-size: map-get($fontsize, xl);
+        &__Preamble {
             line-height: 1.6;
         }
     }
 
     @include media(md) {
-        &__header {
+        &__Header {
             padding-top: 80px;
             padding-bottom: 80px;
         }
     }
 
-    &__billboard {
+    &__Billboard {
         position: relative;
 
         @include media(lg) {
@@ -30,12 +29,12 @@
     
     @include media(lg) {
     
-        &__image {
+        &__Image {
             width: 57%;
             height: 100%;
         }
 
-        &__image-2 {
+        &__Image-2 {
             display: block;
             width: 43%;
             background: url('../images/cykel.jpg') no-repeat;

@@ -8,18 +8,18 @@ import house from '../../images/villan.jpg'
 class Intro extends React.PureComponent {
     render() {
         return (
-            <section className="intro section">
-                <div className="intro__header section__container u-center u-text-center">
-                    <h2 className="intro__title heading heading--line heading--m">
+            <section className="Intro">
+                <div className="Intro__Header">
+                    <h2 className="Intro__Title">
                         <FormattedMessage id="introTitle" />
                     </h2>
-                    <p className="intro__preamble section__preamble u-center">
+                    <p className="Intro__Preamble">
                         <FormattedMessage id="introText" />
                     </p>
                 </div>
-                <div className="intro__billboard u-center">
-                    <img className="intro__image" src={house} alt="Vår fina villa" />
-                    <div className="intro__image-2"></div>
+                <div className="Intro__Billboard">
+                    <img className="Intro__Image" src={house} alt="Vår fina villa" />
+                    <div className="Intro__Image-2"></div>
                 </div>
             </section>
         );

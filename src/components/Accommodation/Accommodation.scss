@@ -4,7 +4,6 @@
     padding-bottom: 40px;
 
     &__container {
-        // @extend .wrap;
         display: flex;
         flex-flow: wrap;
         justify-content: space-between;
@@ -38,7 +37,7 @@
         position: absolute;
         bottom: 20px;
         right: 0;
-        padding: 6px map-get($padding, sm) 4px 14px;
+        padding: 6px 10px 4px 14px;
         color: palette(white);
         background-color: palette(black, trans);
     }
@@ -78,8 +77,6 @@
     }
 
     &__text {
-        padding-left: map-get($padding, sm);
-        padding-right: map-get($padding, sm);
         line-height: 1.15;
     }
 
@@ -89,7 +86,6 @@
         &__item {
             // width: 50%;
             @include grid(.5, lg);
-            margin-bottom: map-get($gutters, lg);
             padding-bottom: 20px;
         }
     }
@@ -97,9 +93,8 @@
     @include media(lg) {
 
         &__container {
-            max-width: 1300px;
-            padding-left: map-get($gutters, lg);
-            padding-right: map-get($gutters, lg);
+            
+            
         }
 
         &__section-title {

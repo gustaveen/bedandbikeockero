@@ -9,18 +9,12 @@ html {
 }
 
 body {
-    font-size: map-get($fontsize, lg);
+    // set fontsize
     line-height: 1.32;
 }
 
 img {
     max-width: 100%;
     height: auto;
-}
-
-@include media(md) {
-    body {
-        font-size: map-get($fontsize, xl);
-    }
 }
 

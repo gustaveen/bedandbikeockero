@@ -11,7 +11,7 @@
         padding: 15px 20px;
         width: 100%;
 
-        @include u-wrap(site);
+        max-width: map-get($maxwidths, site);
 
         @include media(md) {
             padding-top: 15px;
