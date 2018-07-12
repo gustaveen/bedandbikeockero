@@ -15,7 +15,7 @@ class SelectLanguage extends React.Component {
         const { langs } = this.props;
         let activeLang = langs.filter((item) => item.selected === true);
         activeLang = activeLang[0];
-        console.log(langs);
+        
         return (
             <div className="SelectLanguage">
                 <div className="SelectLanguage__Wrap">

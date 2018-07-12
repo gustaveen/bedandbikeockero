@@ -1,0 +1,70 @@
+@mixin u-wrap($list: (), $default: true) {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @if $default {
+
+        @if contains($list, site) {
+            max-width: (map-get($maxwidths, site) + 48px);
+        }
+
+        @if contains($list, content) {
+            max-width: (map-get($maxwidths, content) + 48px);
+        }
+
+        @if contains($list, article) {
+            max-width: (map-get($maxwidths, content) + 48px);
+        }
+
+        padding-left: 24px;
+        padding-right: 24px;
+
+        @include media(md) {
+            padding-left: 48px;
+            padding-right: 48px;
+
+            @if contains($list, site) {
+                max-width: (map-get($maxwidths, site) + 96px);
+            }
+
+            @if contains($list, content) {
+                max-width: (map-get($maxwidths, content) + 96px);
+            }
+
+            @if contains($list, article) {
+                max-width: (map-get($maxwidths, article) + 96px);
+            }
+        }
+
+        @include media(xl) {
+            padding-left: 80px;
+            padding-right: 80px;
+
+            @if contains($list, site) {
+                max-width: (map-get($maxwidths, site) + 160px);
+            }
+
+            @if contains($list, content) {
+                max-width: (map-get($maxwidths, content) + 160px);
+            }
+
+            @if contains($list, article) {
+                max-width: (map-get($maxwidths, article) + 160px);
+            }
+        }
+
+    } @else {
+        @if contains($list, site) {
+            max-width: (map-get($maxwidths, site));
+        }
+
+        @if contains($list, content) {
+            max-width: (map-get($maxwidths, content));
+        }
+
+        @if contains($list, article) {
+            max-width: (map-get($maxwidths, article));
+        }
+    }
+}

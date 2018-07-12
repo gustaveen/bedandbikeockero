@@ -11,13 +11,13 @@ import Contact from '../components/Contact'
 class IndexPage extends React.Component {
   render() {
     return (
-      <main className="main">
-          <Img sizes={this.props.data.heroImage.sizes} />
-          <Intro />
-          <Accommodation />
-          <Facilities images={this.props.data.galleryImages.edges} />
-          <Contact />
-      </main>
+        <main className="main">
+            <Hero image={this.props.data.heroImage} /> 
+            {/* <Img sizes={this.props.data.heroImage.sizes} /> */}
+            <Intro />
+            <Accommodation />
+            <Contact />
+        </main>
     )
   }
 }
@@ -26,21 +26,6 @@ export default IndexPage
 
 export const pageQuery = graphql`
     query IndexSvQuery {
-        galleryImages: allImageSharp(filter: {id: {regex: "/faciliteter/"}}) {
-            edges {
-                node {
-                    id
-                    original {
-                        width
-                        height
-                        src
-                    }
-                    sizes(maxWidth: 800) {
-                        ...GatsbyImageSharpSizes
-                    }
-                }
-            }
-        },
         heroImage: imageSharp(id: { regex: "/lejonet.jpg/" }) {
             sizes(maxWidth: 1400) {
                 ...GatsbyImageSharpSizes
