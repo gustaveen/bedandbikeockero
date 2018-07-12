@@ -40,7 +40,7 @@
             transition: all 0.2s ease-in-out 0s;
         }
 
-        #{$root}__Item--Active &:before,
+        &--Active:before,
         &:hover:before {
             visibility: visible;
             transform: scaleX(1);
