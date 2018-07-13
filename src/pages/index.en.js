@@ -38,8 +38,8 @@ export const pageQuery = graphql`
                 }
             }
         },
-        heroImage: imageSharp(id: { regex: "/lejonet.jpg/" }) {
-            sizes(maxWidth: 1400) {
+        heroImage: imageSharp(id: { regex: "/henrik_trygg-kayaking.jpg/" }) {
+            sizes(maxWidth: 2480) {
                 ...GatsbyImageSharpSizes
             }
         }

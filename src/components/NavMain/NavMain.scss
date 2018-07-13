@@ -36,14 +36,16 @@
             left: 0;
             background-color: black;
             visibility: hidden;
-            transform: scaleX(0);
+            opacity: 0;
+            transform: translateY(2px);
             transition: all 0.2s ease-in-out 0s;
         }
 
         &--Active:before,
         &:hover:before {
             visibility: visible;
-            transform: scaleX(1);
+            opacity: 1;
+            transform: translateY(0);
 
         }
 

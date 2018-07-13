@@ -1,5 +1,5 @@
 .facilities {
-    $path: #{map-get($paths, 'img')};
+    $path: #{map-get($paths, 'svg')};
 
     &__header {
         padding-top: 0;

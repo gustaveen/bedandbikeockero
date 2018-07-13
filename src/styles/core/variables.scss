@@ -1,5 +1,6 @@
 $paths: (
     img: '../assets/images',
+    svg: '../assets/svg',
     fonts: '../assets/fonts'
 );
 
@@ -17,7 +18,7 @@ $maxwidths: (
     content: 816px,
     text: 520px,
     productForm: 808px,
-    site: 1440px
+    site: 1224px
 );
 
 $breakpoints: (
@@ -71,6 +72,9 @@ $circular: 'CircularStd', sans-serif;
 $heading: $circular;
 $proxima: "proxima-nova", sans-serif;
 
+$medium: 500;
+$bold: 700;
+
 
 // Z-index
 $z-index-1: 100;
@@ -90,8 +94,8 @@ $z-index--header: $z-index-2;
 $text: (
     hero: (
         d: (font-size: 4rem, line-height: 1.2),
-        sm: (font-size: calc(40px + (60 - 40) * (100vw - 480px)/ (1440 - 480))),
-        xl: (font-size: 6rem),
+        sm: (font-size: calc(40px + (72 - 40) * (100vw - 480px)/ (1440 - 480))),
+        xxl: (font-size: 7.2rem),
     ),
     h1: (
         d: (font-size: 3rem, line-height: 1.33),

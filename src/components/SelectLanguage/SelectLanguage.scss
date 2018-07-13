@@ -1,5 +1,5 @@
 .SelectLanguage {
-    $path: #{map-get($paths, 'img')};
+    $path: #{map-get($paths, 'svg')};
 
     position: relative;
     margin-left: 20px;
@@ -28,17 +28,14 @@
     }
 
     &__Title {
+        display: block;
+        position: relative;
+        padding-right: 18px;
         font-size: 1.2rem;
         color: #8B8B8B;
+        font-weight: $medium;
         line-height: 1.4;
         letter-spacing: 0.8px;
-        display: block;
-        padding-right: 18px;
-        position: relative;
-
-        @include media(lg) {
-            font-size: 1.4rem;
-        }
 
         &::after {
             content: '';
