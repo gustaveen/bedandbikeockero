@@ -28,5 +28,6 @@ module.exports = {
   'storage': 'Locked storage for bikes',
   'cleaning': 'Cleaning',
   'contactTitle': 'Contact/booking',
-  'contactText': 'For more info and bookings, email us at'
+  'contactText': 'For more info and bookings, email us at',
+  'bookingBarTitle': 'Book your stay at'
 };

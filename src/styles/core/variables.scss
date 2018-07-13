@@ -18,7 +18,7 @@ $maxwidths: (
     content: 816px,
     text: 520px,
     productForm: 808px,
-    site: 1224px
+    site: 1216px
 );
 
 $breakpoints: (
@@ -41,32 +41,19 @@ $gutters: (
 );
 
 $palettes: (
-    red: (
-        default: #ff0000,
-        50: lighten(#ff0000, 50%)
-    ),
-    black: (
-        default: #000,
-        80: #333,
-        trans: rgba(0,0,0,0.72)
-    ),
-    white: (
-        default: #ffffff,
+    gray: (
+        default: #F9F9F9,
         94: darken(#ffffff, 26%)
     ),
     blue: (
-        default: #0000ff,
-        50: darken(#0000ff, 50%)
-    ),
-    purple: (
-        default: #ff69b4,
-        50: darken(#ff69b4, 20%)
-    ),
-    bg: (
-        default: #FAF8F6,
-        20: #f7f7f4
+        default: #0F69D0,
+        5: darken(#0F69D0, 5%)
     )
 );
+
+$gray: palette(gray);
+$blue: palette(blue);
+$blue-5: palette(blue, 5);
 
 $circular: 'CircularStd', sans-serif;
 $heading: $circular;
@@ -74,6 +61,7 @@ $proxima: "proxima-nova", sans-serif;
 
 $medium: 500;
 $bold: 700;
+$black: 900;
 
 
 // Z-index

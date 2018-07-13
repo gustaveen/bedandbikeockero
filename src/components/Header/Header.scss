@@ -13,7 +13,7 @@
         margin-right: auto;
         padding: 15px 20px;
 
-        max-width: map-get($maxwidths, site);
+        @extend .wrap;
 
         @include media(md) {
             padding-top: 15px;
@@ -28,7 +28,6 @@
 
     &__Logo {
         font-size: 1.8rem;
-        color: palette(black, 80);
         text-decoration: none;
         
         @include media(md) {

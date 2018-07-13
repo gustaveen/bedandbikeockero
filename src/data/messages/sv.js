@@ -28,5 +28,6 @@ module.exports = {
   'storage': 'Cykelrum med lås',
   'cleaning': 'Städning',
   'contactTitle': 'Kontakt/Boka',
-  'contactText': 'För mer info och bokningar, maila oss på'
+  'contactText': 'För mer info och bokningar, maila oss på',
+  'bookingBarTitle': 'Boka din vistelse hos oss redan idag!'
 };
