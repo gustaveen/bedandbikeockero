@@ -16,7 +16,7 @@ $maxwidths: (
     xl: 1280px,
     xxl: 1440px,
     content: 816px,
-    text: 520px,
+    intro: 870px,
     productForm: 808px,
     site: 1216px
 );
@@ -102,6 +102,11 @@ $text: (
     ),
     h4: (
         d: (font-size: 1.8rem, line-height: 1.33)
+    ),
+    intro: (
+        d: (font-size: 1.8rem, line-height: 1.4),
+        sm: (font-size: 2.2rem),
+        xl: (font-size: 2.6rem),
     ),
     large: (
         d: (font-size: 1.8rem, line-height: 2)

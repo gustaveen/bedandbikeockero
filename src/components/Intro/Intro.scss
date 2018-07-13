@@ -1,8 +1,32 @@
 .Intro {
+    background-color: $gray;
 
-    &__Preamble {
-        max-width: 580px;
-        text-align: left;
+    &__Container {
+        max-width: (map-get($maxwidths, intro));
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        text-align: center;
+
+        @include media(md) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        
+        @include media(xl) {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+    }
+
+    &__Icon {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    &__Text {
+        @include u-text(intro);
     }
 
     @include media(md) {
@@ -15,31 +39,6 @@
         &__Header {
             padding-top: 80px;
             padding-bottom: 80px;
-        }
-    }
-
-    &__Billboard {
-        position: relative;
-
-        @include media(lg) {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
-    
-    @include media(lg) {
-    
-        &__Image {
-            width: 57%;
-            height: 100%;
-        }
-
-        &__Image-2 {
-            display: block;
-            width: 43%;
-            background: url('../assets/images/cykel.jpg') no-repeat;
-            background-size: cover;
-            background-position: center;
         }
     }
     

@@ -2,24 +2,19 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { FormattedMessage } from 'react-intl';
 
-import house from '../../assets/images/villan.jpg'
+import bike from '../../assets/svg/bike.svg'
 
 
 class Intro extends React.PureComponent {
     render() {
         return (
             <section className="Intro">
-                <div className="Intro__Header">
-                    <h2 className="Intro__Title">
-                        <FormattedMessage id="introTitle" />
+                <div className="Intro__Container">
+                    <img className="Intro__Icon" src={bike} />
+                    <h2 className="Intro__Text">
+                        {/* <FormattedMessage id="introText" /> */}
+                        Välkommen till Bed & Bike Öckerö, en pärla för aktiviteter och rekreation. Hos oss kan du njuta av husets lugn, vackra rum och nyttig frukost. Du kan hyra cykel och kajak. Vi kan erbjuda förslag på turer såväl med <strong>cykel</strong>, <strong>kajak</strong> som <strong>vandring</strong>.
                     </h2>
-                    <p className="Intro__Preamble">
-                        <FormattedMessage id="introText" />
-                    </p>
-                </div>
-                <div className="Intro__Billboard">
-                    <img className="Intro__Image" src={house} alt="Vår fina villa" />
-                    <div className="Intro__Image-2"></div>
                 </div>
             </section>
         );
