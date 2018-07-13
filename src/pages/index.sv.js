@@ -13,7 +13,6 @@ class IndexPage extends React.Component {
     return (
         <main className="main">
             <Hero image={this.props.data.heroImage} /> 
-            {/* <Img sizes={this.props.data.heroImage.sizes} /> */}
             <Intro />
         </main>
     )

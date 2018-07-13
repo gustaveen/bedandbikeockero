@@ -6,9 +6,9 @@
         top: 50%;
         left: 50%;
         width: 100%;
+        @include u-text(hero);
         text-align: center;
         color: white;
-        font-size: 6.4rem;
         font-family: $heading;
         font-weight: 700;
         transform: translate(-50%, -50%);

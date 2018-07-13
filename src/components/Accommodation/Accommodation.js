@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { FormattedMessage } from 'react-intl';
 
-import room1 from '../../images/rum-1.jpg'
-import room2 from '../../images/rum-2.jpg'
-import room3 from '../../images/rum-3.jpg'
-import room4 from '../../images/rum-4.jpg'
+import room1 from '../../assets/images/rum-1.jpg'
+import room2 from '../../assets/images/rum-2.jpg'
+import room3 from '../../assets/images/rum-3.jpg'
+import room4 from '../../assets/images/rum-4.jpg'
 
 class Accommodation extends React.PureComponent {
     

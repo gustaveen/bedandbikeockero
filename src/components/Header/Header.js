@@ -11,8 +11,8 @@ const Header = (props) => (
             <a href={`/${props.currentLang}/`} className="Header__Logo">Bed & Bike Öckerö</a>
             <div className="Header__Menu">
                 <NavMain currentLang={props.currentLang}/>
-                {/* <SelectLanguage langs={props.langs} /> */}
             </div>
+            <SelectLanguage langs={props.langs} />
         </div>
     </header>
 )

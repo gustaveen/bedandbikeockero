@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { FormattedMessage } from 'react-intl';
 
-import house from '../../images/villan.jpg'
+import house from '../../assets/images/villan.jpg'
 
 
 class Intro extends React.PureComponent {
