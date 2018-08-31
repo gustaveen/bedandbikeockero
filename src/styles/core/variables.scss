@@ -43,6 +43,8 @@ $gutters: (
 $palettes: (
     gray: (
         default: #F9F9F9,
+        20: #CFCFCF,
+        70: #585858,
         94: darken(#ffffff, 26%)
     ),
     blue: (
@@ -52,6 +54,8 @@ $palettes: (
 );
 
 $gray: palette(gray);
+$gray-20: palette(gray, 20);
+$gray-70: palette(gray, 70);
 $blue: palette(blue);
 $blue-5: palette(blue, 5);
 
@@ -115,7 +119,10 @@ $text: (
         d: (font-size: 1.3rem, line-height: 1.54)
     ),
     meta: (
-        d: (font-size: 10, line-height: 1.6)
+        d: (font-size: 1rem, line-height: 1.6)
+    ),
+    price: (
+        d: (font-size: 1.8rem, line-height: 1.2)
     ),
     quote: (
         d: (font-size: 24, line-height: 1.33)
